@@ -19,7 +19,7 @@ export default function TopContent() {
                 </div>
             </div>
             <div className='mt-6'>
-                <div className='flex gap-2'>
+                <div className='flex gap-2 w-full flex-wrap'>
                     {sns.map((item, index) => (
                         <Button
                             isIconOnly

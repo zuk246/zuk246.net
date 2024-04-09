@@ -9,7 +9,7 @@ export default function Header() {
             height='4rem'
             className=' backdrop-blur-md bg-background/10'
             classNames={{
-                wrapper: 'max-w-2xl px-0',
+                wrapper: 'max-w-2xl px-4',
             }}
         >
             <NavbarContent justify='start'>
