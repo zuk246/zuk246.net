@@ -51,7 +51,7 @@ export default async function WorksContent() {
                                 </p>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                <p className='text-tiny'>
+                                <p className='text-tiny hidden sm:block'>
                                     {dayjs(work.release).format('YYYY/MM/DD')}
                                 </p>
                                 <Button

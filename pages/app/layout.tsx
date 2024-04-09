@@ -32,7 +32,7 @@ export default function RootLayout({
             <body className='font-noto'>
                 <Providers>
                     <Header />
-                    <main className='max-w-2xl mx-auto py-12 text-default-800'>
+                    <main className='max-w-2xl mx-auto py-12 text-default-800 px-4'>
                         {children}
                     </main>
                     <Footer />
