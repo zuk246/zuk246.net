@@ -1,8 +1,18 @@
 import Content from '@/components/atom/Content';
 import { Works } from '@/types/cms';
-import { Button, Card, CardFooter, Image, Link } from '@nextui-org/react';
+import {
+    Button,
+    Card,
+    CardFooter,
+    Image,
+    Link,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from '@nextui-org/react';
 import dayjs from 'dayjs';
-import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
+import { FaInfo, FaRegClock } from 'react-icons/fa';
+import { FaArrowUpRightFromSquare, FaRegCircleDot, FaT } from 'react-icons/fa6';
 
 const API = 'https://zuk246.microcms.io/api/v1/works';
 const headers = {
@@ -18,8 +28,8 @@ export default async function WorksContent() {
 
     return (
         <Content
-            title='Works'
-            subtitle='Applications and extensions developed to date.'
+            title='作品'
+            subtitle='これまでに開発したアプリや拡張機能'
             className='mt-24'
         >
             <div className='grid grid-cols-1 gap-6'>
@@ -54,6 +64,43 @@ export default async function WorksContent() {
                                 <p className='text-tiny hidden sm:block'>
                                     {dayjs(work.release).format('YYYY/MM/DD')}
                                 </p>
+                                <Popover placement='top'>
+                                    <PopoverTrigger>
+                                        <Button
+                                            size='sm'
+                                            isIconOnly
+                                            radius='lg'
+                                            className='text-tiny text-white bg-black/20'
+                                        >
+                                            <FaInfo size={10} />
+                                        </Button>
+                                    </PopoverTrigger>
+                                    <PopoverContent>
+                                        <ul className='p-2 flex flex-col gap-2'>
+                                            <li className='flex items-center gap-2'>
+                                                <FaRegCircleDot />
+                                                <div>
+                                                    {work.running
+                                                        ? 'アクティブ'
+                                                        : '非アクティブ'}
+                                                </div>
+                                            </li>
+                                            <li className='flex items-center gap-2'>
+                                                <FaRegClock />
+                                                <div>
+                                                    {dayjs(work.release).format(
+                                                        'YYYY/MM/DD'
+                                                    )}{' '}
+                                                    にリリース
+                                                </div>
+                                            </li>
+                                            <li className='flex items-center gap-2'>
+                                                <FaT />
+                                                <div>{work.caption}</div>
+                                            </li>
+                                        </ul>
+                                    </PopoverContent>
+                                </Popover>
                                 <Button
                                     className='text-tiny text-white bg-black/20'
                                     variant='flat'
