@@ -1,6 +1,0 @@
-name = "portfolio-schedule-build"
-main = "src/index.ts"
-compatibility_date = "2024-03-14"
-
-[triggers]
-crons = ["0 17 * * 1"]
