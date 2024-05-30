@@ -1,2 +1,4 @@
-export const intro = `I am a high school student in Japan.
-I do web app development and competitive programming mainly as a hobby. I also developed this portfolio by myself.`;
+export const intro = `高校2年生です。
+Web開発に興味があります。ReactやNext.js、Honoなどを使ってます。
+競技プログラミングは、少しやってます。
+よろしくお願いします。`;
