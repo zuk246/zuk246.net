@@ -1,7 +1,8 @@
 import Bluesky from '@/components/logos/bluesky';
 import Note from '@/components/logos/note';
 import { ReactNode } from 'react';
-import { FaGithub, FaMastodon, FaTwitter } from 'react-icons/fa6';
+import { FaMedium } from 'react-icons/fa';
+import { FaDev, FaGithub, FaMastodon, FaTwitter } from 'react-icons/fa6';
 import { SiBuymeacoffee, SiZenn } from 'react-icons/si';
 
 export const sns: { name: string; icon: ReactNode; href: string }[] = [
@@ -24,6 +25,16 @@ export const sns: { name: string; icon: ReactNode; href: string }[] = [
         name: 'Twitter',
         icon: <FaTwitter size={18} />,
         href: 'https://twitter.com/zuk246',
+    },
+    {
+        name: 'Medium',
+        icon: <FaMedium size={18} />,
+        href: 'https://medium.com/@zuk246',
+    },
+    {
+        name: 'Dev.to',
+        icon: <FaDev size={18} />,
+        href: 'https://dev.to/zuk246',
     },
     {
         name: 'Mastodon',
