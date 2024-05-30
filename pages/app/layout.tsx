@@ -7,6 +7,7 @@ import Footer from '@/components/base/Footer';
 export const metadata: Metadata = {
     title: 'zuk246',
     description: `zuk246のポートフォリオサイト`,
+    metadataBase: new URL('https://zuk246.net'),
     openGraph: {
         locale: 'ja_JP',
         type: 'website',
