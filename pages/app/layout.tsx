@@ -6,13 +6,13 @@ import Footer from '@/components/base/Footer';
 
 export const metadata: Metadata = {
     title: 'zuk246',
-    description: `zuk246's portfolio site`,
+    description: `zuk246のポートフォリオサイト`,
     openGraph: {
-        locale: 'en_US',
+        locale: 'ja_JP',
         type: 'website',
         url: 'https://zuk246.net',
         title: 'zuk246',
-        description: `zuk246's portfolio site`,
+        description: `zuk246のポートフォリオサイト`,
         siteName: 'zuk246',
     },
     twitter: {

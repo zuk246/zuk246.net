@@ -10,11 +10,7 @@ export default async function BlogContent() {
     const feed = await (await new Parser().parseURL(RSS_FEED)).items;
 
     return (
-        <Content
-            title='Blog'
-            subtitle='List of blogs I have written so far'
-            className='mt-24'
-        >
+        <Content title='ブログ' subtitle='最新の記事一覧' className='mt-24'>
             <div className='grid sm:grid-cols-2 grid-cols-1 gap-6'>
                 {feed.map((item, index) => (
                     <div key={index} className='w-full'>

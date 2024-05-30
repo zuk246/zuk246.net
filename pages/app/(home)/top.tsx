@@ -22,7 +22,6 @@ export default function TopContent() {
                 <div className='flex gap-2 w-full flex-wrap'>
                     {sns.map((item, index) => (
                         <Button
-                            isIconOnly
                             radius='full'
                             as={NextUILink}
                             href={item.href}
@@ -30,8 +29,10 @@ export default function TopContent() {
                             key={index}
                             color='primary'
                             variant='flat'
+                            startContent={item.icon}
+                            className='text-sm'
                         >
-                            {item.icon}
+                            {item.name}
                         </Button>
                     ))}
                 </div>
